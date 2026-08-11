@@ -8,12 +8,12 @@ export default function Education() {
             Education
           </p>
 
-          <h2 className="text-4xl font-semibold tracking-tight text-neutral-900 md:text-5xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">
             Kristiania University College
           </h2>
 
           <p className="mt-5 text-lg text-neutral-700">
-            Bachelor in Information Technology
+            Bachelor in Information Technology -
           </p>
 
           <p className="mt-1 text-lg text-neutral-700">
@@ -21,8 +21,22 @@ export default function Education() {
           </p>
 
           <p className="mt-4 text-base text-neutral-500">
-            2024 — 2027
+            2024 - 2027
           </p>
+
+          <div className="mx-auto mt-10 max-w-2xl border-t border-neutral-300 pt-8">
+            <h3 className="text-2xl font-semibold tracking-tight text-neutral-900">
+              University of Oslo
+            </h3>
+
+            <p className="mt-3 text-lg text-neutral-700">Informatics</p>
+
+            <p className="mt-2 text-base text-neutral-600">
+              One year completed
+            </p>
+
+            <p className="mt-3 text-base text-neutral-500">2023 - 2024</p>
+          </div>
         </div>
 
         {/* Bølge */}
@@ -50,40 +64,57 @@ export default function Education() {
       </div>
 
       {/* Volunteering */}
-      <div className="bg-white px-6 pt-14 pb-24">
-        <div className="mx-auto max-w-4xl text-center">
+      <div className="bg-white px-6 pb-24 pt-14">
+        <div className="mx-auto max-w-4xl">
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-neutral-500">
             Volunteering
           </p>
 
-          <h2 className="text-1xl font-semibold tracking-tight text-neutral-900 md:text-4xl">
-            Kvinner & IT
+          <h2 className="text-3xl font-semibold tracking-tight text-neutral-900">
+            Volunteer work
           </h2>
 
-          <p className="mt-6 text-lg text-neutral-600">
-            Board Member
-          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <article className="rounded-2xl border border-neutral-200 bg-white p-6">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-xl font-semibold tracking-tight text-neutral-900">
+                    Kvinner &amp; IT
+                  </h3>
+                  <p className="mt-2 font-medium text-neutral-700">
+                    Board Member &amp; Financial Manager
+                  </p>
+                </div>
+                <time className="shrink-0 text-sm text-neutral-500">
+                  2024 - 2026
+                </time>
+              </div>
 
-          <p className="mt-2 text-lg text-neutral-600">
-            Financial Manager
-          </p>
+              <p className="mt-4 leading-7 text-neutral-600">
+                Contributing to an inclusive student community for women in
+                technology.
+              </p>
+            </article>
 
-          <p className="mt-4 mb-8 text-base text-neutral-500">
-            2024 - 2026
-          </p>
+            <article className="rounded-2xl border border-neutral-200 bg-white p-6">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-xl font-semibold tracking-tight text-neutral-900">
+                    Girl Tech Fest
+                  </h3>
+                  <p className="mt-2 font-medium text-neutral-700">
+                    Volunteer · Video Production
+                  </p>
+                </div>
+                <time className="shrink-0 text-sm text-neutral-500">2025</time>
+              </div>
 
-        <h2 className="text-1xl font-semibold tracking-tight text-neutral-900 md:text-4xl">
-            Girl Tech Fest
-          </h2>
-
-          <p className="mt-6 text-lg text-neutral-600">
-            
-          </p>
-
-          <p className="mt-4 text-base text-neutral-500">
-            2025
-          </p>
-
+              <p className="mt-4 leading-7 text-neutral-600">
+                Filmed and edited short videos for participating companies to
+                publish on LinkedIn.
+              </p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
