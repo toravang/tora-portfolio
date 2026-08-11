@@ -79,10 +79,9 @@ src/
 
 ## Current status
 
-The home page, responsive navigation, and contact page are implemented. The
-portfolio page is still under development. Because `Projects.tsx` does not yet
-return page content, `npm run build` currently fails until that component is
-implemented.
+The primary routes are implemented, including a responsive portfolio page for
+projects and published writing. New project cards can be added as the portfolio
+grows.
 
 ## Contact
 

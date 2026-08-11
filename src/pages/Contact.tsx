@@ -75,6 +75,37 @@ export default function Contact() {
               </span>
             </a>
 
+                        {/* Email */}
+            <a
+              href="mailto:toranvang@gmail.com"
+              className="
+                group
+                flex
+                min-h-36
+                flex-col
+                items-center
+                justify-center
+                rounded-2xl
+                border
+                border-neutral-200
+                bg-white
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-neutral-900
+                hover:shadow-lg
+                focus:outline-none
+                focus:ring-2
+                focus:ring-neutral-900
+              "
+            >
+              <FaEnvelope className="text-4xl text-neutral-900 transition-transform duration-300 group-hover:scale-110" />
+
+              <span className="mt-4 text-lg font-medium text-neutral-900">
+                Email
+              </span>
+            </a>
+
             {/* GitHub */}
             <a
               href="https://github.com/toravang"
@@ -108,36 +139,6 @@ export default function Contact() {
               </span>
             </a>
 
-            {/* Email */}
-            <a
-              href="mailto:toranvang@gmail.com"
-              className="
-                group
-                flex
-                min-h-36
-                flex-col
-                items-center
-                justify-center
-                rounded-2xl
-                border
-                border-neutral-200
-                bg-white
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-neutral-900
-                hover:shadow-lg
-                focus:outline-none
-                focus:ring-2
-                focus:ring-neutral-900
-              "
-            >
-              <FaEnvelope className="text-4xl text-neutral-900 transition-transform duration-300 group-hover:scale-110" />
-
-              <span className="mt-4 text-lg font-medium text-neutral-900">
-                Email
-              </span>
-            </a>
 
           </div>
         </section>

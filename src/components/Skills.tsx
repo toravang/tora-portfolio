@@ -94,6 +94,8 @@ const technologies: Skill[] = [
   },
 ];
 
+const allSkills = [...programmingLanguages, ...technologies];
+
 function SkillIcon({
   name,
   icon: Icon,
@@ -131,40 +133,73 @@ function SkillIcon({
   );
 }
 
+function MobileSkill({ name, icon: Icon, color }: Skill) {
+  return (
+    <div className="flex w-28 shrink-0 flex-col items-center rounded-2xl border border-neutral-200 bg-white px-3 py-5 shadow-sm">
+      <Icon className={`${color} text-4xl`} aria-hidden="true" />
+      <p className="mt-3 text-sm font-medium text-neutral-700">{name}</p>
+    </div>
+  );
+}
+
 export default function Skills() {
   return (
-    <section className="bg-neutral-50 pt-28 pb-0">
+    <section className="bg-neutral-50 pb-0 pt-16 md:pt-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-semibold uppercase tracking-[0.22em] text-neutral-900">
+          <h2 className="text-3xl font-semibold uppercase tracking-[0.22em] text-neutral-900">
             Skills
           </h2>
         </div>
 
-        <div>
-          <h3 className="mb-14 text-center text-2xl font-semibold text-neutral-900">
-            Programming Languages
-          </h3>
+        <div className="skills-marquee md:hidden">
+          <p className="mb-7 text-center text-lg font-medium text-neutral-700">
+            Languages &amp; technologies
+          </p>
 
-          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-7">
-            {programmingLanguages.map((skill) => (
-              <SkillIcon key={skill.name} {...skill} />
-            ))}
+          <div className="skills-marquee-track flex w-max">
+            <div className="flex shrink-0 gap-4 pr-4">
+              {allSkills.map((skill) => (
+                <MobileSkill key={skill.name} {...skill} />
+              ))}
+            </div>
+
+            <div
+              aria-hidden="true"
+              className="flex shrink-0 gap-4 pr-4 motion-reduce:hidden"
+            >
+              {allSkills.map((skill) => (
+                <MobileSkill key={`duplicate-${skill.name}`} {...skill} />
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="mt-10">
-          <h3 className="mb-14 text-center text-2xl font-semibold text-neutral-900">
-            Technologies
-          </h3>
+        <div className="hidden md:block">
+          <div>
+            <h3 className="mb-14 text-center text-2xl font-semibold text-neutral-900">
+              Programming Languages
+            </h3>
 
-          <div className="grid grid-cols-2 gap-y-12 sm:grid-cols-3 lg:grid-cols-6">
-            {technologies.map((skill) => (
-              <SkillIcon key={skill.name} {...skill} />
-            ))}
+            <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 lg:grid-cols-7">
+              {programmingLanguages.map((skill) => (
+                <SkillIcon key={skill.name} {...skill} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="mb-14 text-center text-2xl font-semibold text-neutral-900">
+              Technologies
+            </h3>
+
+            <div className="grid grid-cols-2 gap-y-12 sm:grid-cols-3 lg:grid-cols-6">
+              {technologies.map((skill) => (
+                <SkillIcon key={skill.name} {...skill} />
+              ))}
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );
