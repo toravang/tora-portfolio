@@ -1,9 +1,8 @@
-import { FiArrowUpRight, FiCheck, FiEdit3, FiLock } from "react-icons/fi";
+import { FiArrowUpRight, FiEdit3 } from "react-icons/fi";
 
 const articleUrl =
   "https://www.kode24.no/artikkel/i-dag-er-det-mange-kvinner-som-foler-at-de-ikke-passer-inn-i-it-bransjen/228262";
 
-const runTrackTags = ["React", "TypeScript", "Tailwind CSS", "Strava API"];
 const portfolioTags = ["React", "TypeScript", "Tailwind CSS", "Vite"];
 
 export default function Projects() {
@@ -18,18 +17,10 @@ export default function Projects() {
           <h1 className="text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl">
             Projects &amp; Writing
           </h1>
-
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-neutral-500">
-            A growing collection of what I&apos;m learning, building, and
-            contributing to.
-          </p>
         </header>
 
         <section className="mt-14 md:mt-16" aria-labelledby="projects-heading">
           <div className="mb-6">
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-neutral-500">
-              Selected projects
-            </p>
             <h2
               id="projects-heading"
               className="mt-2 text-3xl font-semibold tracking-tight text-neutral-900"
@@ -38,6 +29,7 @@ export default function Projects() {
             </h2>
           </div>
 
+        {/* RunTrack App
           <article className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="grid md:grid-cols-[1.05fr_0.95fr] lg:h-[340px]">
               <div className="flex items-center bg-[#edf7ef] p-4 sm:p-6 md:min-h-[320px]">
@@ -87,7 +79,7 @@ export default function Projects() {
                 </div>
               </div>
             </div>
-          </article>
+          </article> */}
 
           <article className="group mt-5 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="grid md:grid-cols-[0.72fr_1.28fr] lg:h-[340px]">
@@ -142,10 +134,7 @@ export default function Projects() {
                 </ul>
 
                 <div className="mt-7 flex items-center gap-3 text-sm font-medium text-neutral-900">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-900 text-white">
-                    <FiCheck aria-hidden="true" />
-                  </span>
-                  You&apos;re viewing the live project
+           
                 </div>
               </div>
             </div>
