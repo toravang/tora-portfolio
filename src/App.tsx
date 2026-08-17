@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
-const siteUrl = "https://toranvang.com";
+const siteUrl = "https://toranvang.no";
 
 const metadata: Record<string, { title: string; description: string }> = {
   "/": {
