@@ -1,12 +1,69 @@
+import { useEffect } from "react";
 import { Route, Routes } from "react-router";
+import { useLocation } from "react-router";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
+const siteUrl = "https://toranvang.com";
+
+const metadata: Record<string, { title: string; description: string }> = {
+  "/": {
+    title: "Tora Nordhagen Vang | Portfolio",
+    description:
+      "Portfolio for Tora Nordhagen Vang, a frontend and mobile development student.",
+  },
+  "/prosjekter": {
+    title: "Projects & Writing | Tora Nordhagen Vang",
+    description:
+      "Explore projects and published writing by Tora Nordhagen Vang.",
+  },
+  "/kontakt": {
+    title: "Contact | Tora Nordhagen Vang",
+    description: "Get in touch with Tora Nordhagen Vang.",
+  },
+};
+
+function SeoMetadata() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const page = metadata[pathname] ?? metadata["/"];
+    const canonicalUrl = `${siteUrl}${pathname === "/" ? "/" : pathname}`;
+
+    document.title = page.title;
+
+    const description = document.querySelector<HTMLMetaElement>(
+      'meta[name="description"]',
+    );
+    const openGraphTitle = document.querySelector<HTMLMetaElement>(
+      'meta[property="og:title"]',
+    );
+    const openGraphDescription = document.querySelector<HTMLMetaElement>(
+      'meta[property="og:description"]',
+    );
+    const openGraphUrl = document.querySelector<HTMLMetaElement>(
+      'meta[property="og:url"]',
+    );
+    const canonical = document.querySelector<HTMLLinkElement>(
+      'link[rel="canonical"]',
+    );
+
+    description?.setAttribute("content", page.description);
+    openGraphTitle?.setAttribute("content", page.title);
+    openGraphDescription?.setAttribute("content", page.description);
+    openGraphUrl?.setAttribute("content", canonicalUrl);
+    canonical?.setAttribute("href", canonicalUrl);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <>
+      <SeoMetadata />
       <Navbar />
 
       <main>
