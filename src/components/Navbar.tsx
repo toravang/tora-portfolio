@@ -5,6 +5,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Lar brukeren lukke mobilmenyen med Escape-tasten.
     const closeMenuOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsMenuOpen(false);
@@ -15,7 +16,8 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", closeMenuOnEscape);
   }, []);
 
-  const linkStyle = ({ isActive }: { isActive: boolean }) =>
+  // React Router sender inn isActive, slik at gjeldende side kan markeres.
+  const desktopLinkStyle = ({ isActive }: { isActive: boolean }) =>
     `text-[11px] uppercase tracking-[0.18em] transition-colors duration-200 ${
       isActive
         ? "text-black"
@@ -39,15 +41,15 @@ export default function Navbar() {
           </NavLink>
 
           <div className="hidden items-center gap-10 md:flex">
-            <NavLink to="/" className={linkStyle}>
+            <NavLink to="/" className={desktopLinkStyle}>
               Home
             </NavLink>
 
-            <NavLink to="/prosjekter" className={linkStyle}>
+            <NavLink to="/prosjekter" className={desktopLinkStyle}>
               Portfolio
             </NavLink>
 
-            <NavLink to="/kontakt" className={linkStyle}>
+            <NavLink to="/kontakt" className={desktopLinkStyle}>
               Contact
             </NavLink>
           </div>

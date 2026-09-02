@@ -3,6 +3,7 @@ import { FiArrowUpRight, FiEdit3 } from "react-icons/fi";
 const articleUrl =
   "https://www.kode24.no/artikkel/i-dag-er-det-mange-kvinner-som-foler-at-de-ikke-passer-inn-i-it-bransjen/228262";
 
+// Teknologiene vises som merkelapper på prosjektkortet.
 const portfolioTags = ["React", "TypeScript", "Tailwind CSS", "Vite"];
 
 export default function Projects() {
@@ -29,58 +30,6 @@ export default function Projects() {
             </h2>
           </div>
 
-        {/* RunTrack App
-          <article className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <div className="grid md:grid-cols-[1.05fr_0.95fr] lg:h-[340px]">
-              <div className="flex items-center bg-[#edf7ef] p-4 sm:p-6 md:min-h-[320px]">
-                <img
-                  src="/runtrack-preview.png"
-                  alt="RunTrack dashboard with weekly running statistics"
-                  className="w-full rounded-2xl border border-white/70 shadow-lg"
-                />
-              </div>
-
-              <div className="flex flex-col justify-center p-7 md:p-9 lg:p-10">
-                <div className="flex items-center justify-between gap-4">
-                  <p className="text-xs font-medium uppercase tracking-[0.28em] text-neutral-500">
-                    In progress
-                  </p>
-                </div>
-
-                <h3 className="mt-3 text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl">
-                  RunTrack
-                </h3>
-                <p className="mt-4 max-w-xl leading-7 text-neutral-600">
-                  A responsive running log with weekly statistics, recent run
-                  history, automatic pace calculation, local storage, and an
-                  optional Strava import.
-                </p>
-
-                <ul
-                  className="mt-6 flex flex-wrap gap-2"
-                  aria-label="Technologies used for RunTrack"
-                >
-                  {runTrackTags.map((tag) => (
-                    <li
-                      key={tag}
-                      className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.12em] text-neutral-600"
-                    >
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-
-                <div
-                  className="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-neutral-100 px-3 py-2 text-xs font-medium text-neutral-600"
-                  aria-label="RunTrack source code is currently in a private GitHub repository"
-                >
-                  <FiLock aria-hidden="true" />
-                  Private repository
-                </div>
-              </div>
-            </div>
-          </article> */}
-
           <article className="group mt-5 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div className="grid md:grid-cols-[0.72fr_1.28fr] lg:h-[340px]">
               <div className="relative flex min-h-56 flex-col justify-between overflow-hidden bg-neutral-900 p-7 text-white md:min-h-[320px] md:p-8">
@@ -93,23 +42,14 @@ export default function Projects() {
                   className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-white/[0.04]"
                 />
 
-                <div className="relative flex items-center justify-between gap-4">
+                <div className="relative">
                   <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-neutral-400">
                     Personal project
                   </span>
                 </div>
-
-                <div className="relative">
-                  <p className="text-5xl font-semibold tracking-[-0.06em] text-white md:text-6xl">
-                  </p>
-                  <p className="mt-3 text-xs uppercase tracking-[0.22em] text-neutral-400">
-                  </p>
-                </div>
               </div>
 
               <div className="flex flex-col justify-center p-7 md:p-9 lg:p-10">
-                <p className="text-xs font-medium uppercase tracking-[0.28em] text-neutral-500">
-                </p>
                 <h3 className="mt-3 text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl">
                   Personal website
                 </h3>
@@ -133,9 +73,6 @@ export default function Projects() {
                   ))}
                 </ul>
 
-                <div className="mt-7 flex items-center gap-3 text-sm font-medium text-neutral-900">
-           
-                </div>
               </div>
             </div>
           </article>

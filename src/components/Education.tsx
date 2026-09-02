@@ -1,7 +1,6 @@
 export default function Education() {
   return (
-    <section className="m-0 p-0">
-      {/* Education */}
+    <section>
       <div className="relative bg-zinc-100 pt-24 pb-32">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-neutral-500">
@@ -39,7 +38,7 @@ export default function Education() {
           </div>
         </div>
 
-        {/* Bølge */}
+        {/* SVG-en lager overgangen mellom utdanning og frivillig arbeid. */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
           <svg
             viewBox="0 0 1440 150"
@@ -63,7 +62,6 @@ export default function Education() {
         </div>
       </div>
 
-      {/* Volunteering */}
       <div className="bg-white px-6 pb-24 pt-14">
         <div className="mx-auto max-w-4xl">
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-neutral-500">

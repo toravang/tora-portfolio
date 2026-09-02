@@ -24,6 +24,7 @@ body {
   }
 }
 
+/* Skjuler endene av den rullende ferdighetslisten med en myk overgang. */
 .skills-marquee {
   margin-inline: -1.5rem;
   overflow: hidden;
@@ -50,6 +51,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* Beholder innholdet tilgjengelig uten animasjon for brukere som ønsker det. */
   .skills-marquee {
     overflow-x: auto;
     -webkit-mask-image: none;
