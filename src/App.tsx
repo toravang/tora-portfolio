@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { Route, Routes } from "react-router";
-import { useLocation } from "react-router";
+import { Route, Routes, useLocation } from "react-router";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -8,6 +7,7 @@ import Contact from "./pages/Contact";
 
 const siteUrl = "https://toranvang.no";
 
+// Innholdet som skal vises i nettleserfanen og i søkeresultater for hver side.
 const metadata: Record<string, { title: string; description: string }> = {
   "/": {
     title: "Tora Nordhagen Vang | Portfolio",
@@ -29,6 +29,7 @@ function SeoMetadata() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Oppdaterer metadata når brukeren navigerer uten at siden lastes på nytt.
     const page = metadata[pathname] ?? metadata["/"];
     const canonicalUrl = `${siteUrl}${pathname === "/" ? "/" : pathname}`;
 
@@ -65,14 +66,11 @@ function App() {
     <>
       <SeoMetadata />
       <Navbar />
-
-      <main>
-        <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/prosjekter" element={<Projects />} />
-              <Route path="/kontakt" element={<Contact />} />
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/prosjekter" element={<Projects />} />
+        <Route path="/kontakt" element={<Contact />} />
+      </Routes>
     </>
   );
 }

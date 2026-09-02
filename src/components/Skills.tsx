@@ -23,6 +23,7 @@ type Skill = {
   color: string;
 };
 
+// Ferdighetene er delt i to grupper på større skjermer.
 const programmingLanguages: Skill[] = [
   {
     name: "Java",
@@ -96,11 +97,7 @@ const technologies: Skill[] = [
 
 const allSkills = [...programmingLanguages, ...technologies];
 
-function SkillIcon({
-  name,
-  icon: Icon,
-  color,
-}: Skill) {
+function SkillIcon({ name, icon: Icon, color }: Skill) {
   return (
     <div className="group flex min-h-40 flex-col items-center">
       <Icon
@@ -117,7 +114,7 @@ function SkillIcon({
       <p
         className="
           mt-8
-          text-1xl
+          text-base
           font-normal
           tracking-tight
           text-neutral-900
@@ -168,6 +165,7 @@ export default function Skills() {
               aria-hidden="true"
               className="flex shrink-0 gap-4 pr-4 motion-reduce:hidden"
             >
+              {/* Kopien gjør at mobilrekken kan rulle kontinuerlig uten et tomrom. */}
               {allSkills.map((skill) => (
                 <MobileSkill key={`duplicate-${skill.name}`} {...skill} />
               ))}

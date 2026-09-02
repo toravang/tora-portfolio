@@ -6,6 +6,7 @@ const worker = {
       return response;
     }
 
+    // Sender ukjente nettadresser til React Router i stedet for en 404-side.
     const indexUrl = new URL("/index.html", request.url);
     return env.ASSETS.fetch(new Request(indexUrl, request));
   },
