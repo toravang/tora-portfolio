@@ -1,7 +1,6 @@
 # Tora Portfolio
 
-Personal portfolio website for Tora Nordhagen Vang, a Frontend and Mobile
-Development student at Kristiania University College.
+My personal portfolio website. 
 
 The site presents my background, technical skills, education, volunteering
 experience, projects, and contact information in a responsive single-page
