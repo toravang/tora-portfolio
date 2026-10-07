@@ -22,7 +22,6 @@ application.
 - Tailwind CSS 4
 - React Router 7
 - React Icons
-- ESLint
 
 ## Getting started
 
