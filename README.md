@@ -1,18 +1,21 @@
 # Tora Portfolio
 
-My personal portfolio website. 
+[![CI](https://github.com/toravang/tora-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/toravang/tora-portfolio/actions/workflows/ci.yml)
 
-The site presents my background, technical skills, education, volunteering
-experience, projects, and contact information in a responsive single-page
-application.
+My personal portfolio website, designed and built to present my background,
+technical skills, education, volunteer experience, projects, and published
+writing.
 
-## Features
+**[View the live website](https://toranvang.no)**
 
-- Responsive layout for desktop and mobile devices
-- Mobile navigation with an overlay hamburger menu
-- About, skills, education, and volunteering sections
-- Contact page with links to LinkedIn, GitHub, and email
-- Client-side routing between pages
+## Highlights
+
+- Responsive single-page application for desktop and mobile
+- Accessible navigation with keyboard support and reduced-motion handling
+- Route-specific titles, descriptions, canonical URLs, and Open Graph metadata
+- Project and writing sections with external links
+- Static-hosting support for client-side routes
+- Automated lint and production-build checks with GitHub Actions
 
 ## Tech stack
 
@@ -23,45 +26,49 @@ application.
 - React Router 7
 - React Icons
 
-## Getting started
+## Technical choices
+
+The site uses small, focused React components for navigation and page sections.
+Repeated content such as skills and contact links is stored as data and rendered
+consistently. React Router handles navigation, while the hosting configuration
+ensures that direct visits to nested routes still load the application.
+
+Metadata is updated for each route to give shared links and search engines more
+useful page information. The interface also respects the user's reduced-motion
+preference.
+
+## Run locally
 
 ### Prerequisites
 
 - Node.js `20.19+` or `22.12+`
 - npm
 
-### Installation
-
 ```bash
 git clone https://github.com/toravang/tora-portfolio.git
 cd tora-portfolio
 npm install
-```
-
-Start the local development server:
-
-```bash
 npm run dev
 ```
 
-Vite will print the local URL in the terminal, normally
-`http://localhost:5173`.
+Vite will print the local URL, normally `http://localhost:5173`.
 
-## Available scripts
+## Quality checks
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Starts the Vite development server |
-| `npm run build` | Type-checks and creates a production build |
-| `npm run lint` | Checks the project with ESLint |
-| `npm run preview` | Previews the production build locally |
+```bash
+npm run lint
+npm run build
+```
+
+The same checks run automatically for pushes and pull requests through GitHub
+Actions.
 
 ## Routes
 
-| Route | Page |
+| Route | Content |
 | --- | --- |
-| `/` | Home, about, skills, and education |
-| `/prosjekter` | Portfolio projects |
+| `/` | Introduction, skills, education, and volunteer experience |
+| `/prosjekter` | Projects and published writing |
 | `/kontakt` | Contact information |
 
 ## Project structure
@@ -70,19 +77,13 @@ Vite will print the local URL in the terminal, normally
 src/
 ├── components/   Reusable page sections and navigation
 ├── pages/        Route-level page components
-├── App.tsx       Application routes and shared layout
+├── App.tsx       Application routes and metadata
 ├── index.css     Global styles and Tailwind CSS import
 └── main.tsx      Application entry point
 ```
 
-## Current status
-
-The primary routes are implemented, including a responsive portfolio page for
-projects and published writing. New project cards can be added as the portfolio
-grows.
-
 ## Contact
 
+- [Portfolio](https://toranvang.no)
 - [LinkedIn](https://www.linkedin.com/in/tora-nordhagen-vang)
-- [GitHub](https://github.com/toravang)
 - [Email](mailto:toranvang@gmail.com)
